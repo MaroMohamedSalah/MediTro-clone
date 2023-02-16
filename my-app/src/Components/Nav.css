@@ -1,0 +1,129 @@
+a {
+	text-decoration: none !important;
+}
+.secondary-area {
+	list-style: none;
+	float: right;
+	height: 105px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 9;
+	padding-left: 15px;
+}
+.btn-icon-bx {
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: inherit;
+	line-height: 40px;
+	display: inline-block;
+	margin: -12px -27px -12px 15px;
+	color: #000;
+}
+.contact {
+	padding: 10px 29.5px 12px 32px !important;
+}
+nav .search-btn button {
+	background: none;
+	border: none;
+	margin-right: 25px;
+	font-size: 1.25em;
+	color: var(--main-color);
+}
+
+.num-bx i {
+	/* transform: rotate(90deg); */
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	background-color: rgba(86, 90, 207, 0.1);
+	font-size: 18px;
+	border-radius: 8px;
+	color: var(--main-color);
+	margin-right: 15px;
+}
+.num-bx a {
+	font-weight: 700;
+	font-size: 20px;
+	color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+	margin-right: 15px;
+}
+.middle-area {
+	justify-content: end;
+	width: 58%;
+	gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+	.middle-area {
+		width: 64%;
+	}
+}
+.middle-area > li > a {
+	color: var(--secondary-color);
+	font-size: 16px;
+	padding: 45px 20px;
+	cursor: pointer;
+	font-weight: 600;
+	display: inline-block;
+	position: relative;
+	border-width: 0 0 0 1px;
+	line-height: 1;
+	transition: all var(--main-transition) ease-in-out;
+}
+.middle-area > li > .active {
+	color: var(--third-color) !important;
+}
+.middle-area > li > .active i {
+	color: var(--third-color);
+}
+.middle-area > li > .active i {
+	transform: rotate(45deg);
+}
+.middle-area > li > a::after {
+	display: none;
+}
+.middle-area > li > a i {
+	color: #bbbbcf;
+	font-size: 12px;
+	transition: all 0.4s ease-in-out;
+	margin: 4px;
+}
+.middle-area .dropdown-menu {
+	display: block;
+	border-radius: 2px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border: none;
+	transition: transform 0.2s ease-in-out, opacity 0.6s ease-in;
+	padding-right: 50px;
+}
+.middle-area .dropdown-menu:not(.show) {
+	transform: translateY(30px);
+	opacity: 0;
+	z-index: -1;
+	pointer-events: none;
+}
+.middle-area .dropdown-menu.show {
+	transform: translateY(0px);
+	opacity: 1;
+}
+.middle-area .dropdown-menu > li > a {
+	position: relative;
+	width: fit-content;
+}
+.middle-area .dropdown-menu > li > a:hover {
+	background-color: transparent !important;
+	color: var(--main-color);
+}
+.middle-area .dropdown-menu > li > a::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	color: var(--main-color);
+}
