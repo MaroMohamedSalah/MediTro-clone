@@ -1,0 +1,127 @@
+.Intro {
+	height: 100vh;
+	background-color: var(--backGroundColor);
+}
+.Intro .first .mainText {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAASBAMAAABlZ9nIAAAAFVBMVEUAAABWWs9WWs9WWs9WWs9WWs9WWs/1NWIvAAAAB3RSTlMAJR0IGRQP8idXOgAAAEdJREFUCNdjYBB0YGBgFmRgYGASAhKMYkAiUIABIs4AFDcAEQoMQHEBIGQVYHBgYBQAihqCFCmCVSYwMLAKgjSDTDAUhogDALC/BAIr+ncLAAAAAElFTkSuQmCC);
+	color: var(--main-color);
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px;
+}
+.Intro .first {
+	z-index: 2;
+}
+.Intro .first p {
+	margin-bottom: 30px;
+	font-size: 45px;
+	color: var(--secondary-color);
+	font-weight: 800;
+}
+.Intro .first .readMore {
+	background-color: var(--third-color);
+	padding: 15px 40px;
+	color: var(--backGroundColor);
+	font-weight: 500;
+	transition: all var(--main-transition) ease-in-out;
+	border-radius: 9px;
+}
+.Intro .first .readMore:hover {
+	opacity: 0.75;
+}
+.Intro .first .ships {
+	z-index: -1;
+}
+@media only screen and (max-width: 600px) {
+	/* For mobile */
+	.Intro .first .ships {
+		display: none;
+	}
+	.Intro .first p {
+		font-size: 1em;
+	}
+	.Intro .first .readMore {
+		padding: 10px 20px;
+	}
+}
+@media screen and (min-width: 768px) {
+	/* For Laptops */
+	.Intro .first .doctor-img {
+		width: 75%;
+		animation: upAndDown 3s 1s forwards linear infinite;
+	}
+}
+@media screen and (min-width: 1900px) {
+	/* For Big TV's (HD Screens)  */
+	.Intro .first .doctor-img {
+		width: 100%;
+		animation: upAndDown 3s 1s forwards linear infinite;
+	}
+}
+.Intro .first .ships img:nth-child(1) {
+	left: -98px;
+	bottom: 127px;
+	animation: upAndDown 3s both linear infinite;
+}
+.Intro .first .ships img:nth-child(2) {
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+}
+.Intro .first .ships img:nth-child(3) {
+	right: 0;
+	bottom: 100px;
+	animation: leftAndRight 3s both linear infinite;
+}
+.Intro .first .ships img:nth-child(4) {
+	left: 5%;
+	top: 25%;
+}
+.Intro .first .ships img:nth-child(5) {
+	right: 45%;
+	top: 25%;
+	animation: upAndDown 3s both linear infinite;
+}
+@media screen and (min-width: 768px) {
+	/* For Laptops */
+	.Intro .first .ships img:nth-child(4) {
+		left: 5%;
+		top: 20%;
+	}
+}
+@media screen and (min-width: 1900px) {
+	/* For Big TV's (HD Screens)  */
+}
+@keyframes upAndDown {
+	0% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
+@keyframes leftAndRight {
+	0% {
+		transform: translateX(10px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(10px);
+	}
+}
+@keyframes ImgUpAndDown {
+	0% {
+		transform: translateY(10px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}

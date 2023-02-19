@@ -1,6 +1,13 @@
 a {
 	text-decoration: none !important;
 }
+.NavBar {
+	background: transparent;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
 .secondary-area {
 	list-style: none;
 	float: right;
