@@ -8,6 +8,24 @@ a {
 	width: 100%;
 	z-index: 999;
 }
+.NavBar .navbar-toggler {
+	border: none !important;
+	outline: none !important;
+}
+.NavBar .navbar-toggler:hover {
+	border: none !important;
+	outline: none !important;
+}
+@media only screen and (max-width: 600px) {
+	/* For mobile */
+	.NavBar .navbar-brand {
+		width: 40%;
+	}
+	.NavBar .container-fluid {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
 .secondary-area {
 	list-style: none;
 	float: right;
@@ -117,9 +135,13 @@ nav .search-btn button {
 	transform: translateY(0px);
 	opacity: 1;
 }
+.middle-area .dropdown-menu > li {
+	padding: 10px 20px;
+}
 .middle-area .dropdown-menu > li > a {
 	position: relative;
 	width: fit-content;
+	padding: 0;
 }
 .middle-area .dropdown-menu > li > a:hover {
 	background-color: transparent !important;
@@ -128,9 +150,80 @@ nav .search-btn button {
 .middle-area .dropdown-menu > li > a::after {
 	position: absolute;
 	content: "";
-	width: 100%;
-	left: 0;
+	width: 0%;
 	bottom: 0;
+	right: 0;
 	height: 2px;
+	background-color: var(--main-color);
+	transition: all 0.1s ease-in-out;
+}
+.middle-area .dropdown-menu > li > a:hover::after {
+	width: 100%;
+	right: auto;
+	left: 0;
+}
+@media only screen and (max-width: 600px) {
+	/* on mobile  */
+	.nav {
+		float: none;
+		width: 70%;
+		min-width: 300px;
+	}
+	.middle-area .dropdown-menu:not(.show) {
+		display: none;
+		transform: translateY(0px);
+		opacity: 0;
+		z-index: -1;
+		pointer-events: none;
+	}
+	.middle-area .dropdown-menu.show {
+		display: block;
+	}
+	.middle-area > li > a {
+		padding: 15px 2px;
+		padding: 15px 2px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.middle-area .nav-item {
+		border-bottom: 2px solid var(--backGroundColor);
+	}
+}
+.NavBar .sideBar {
+	transition: all var(--main-transition) cubic-bezier(0.02, 0.57, 0.5, 0.79);
+	background-color: var(--sideBar-background);
+}
+.NavBar .sideBar .btn-close {
+	position: absolute;
+	background-color: var(--main-color);
+	right: 10px;
+	top: 8px;
+	border-radius: 0px;
+	padding: 12px;
+}
+@media only screen and (max-width: 600px) {
+	.NavBar .sideBar {
+		display: block;
+	}
+}
+.NavBar .social {
+	justify-content: space-evenly;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	justify-content: space-evenly;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 71%;
+	margin-top: 50%;
+}
+.NavBar .social a {
+	color: var(--backGroundColor);
+	font-size: 1.5em;
+	transition: all var(--main-transition) ease-in-out;
+}
+.NavBar .social a:hover {
 	color: var(--main-color);
 }
