@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import logo from "../images/logo.png";
+import menuLogo from "../images/menu logo.png";
 import "./Nav.css";
 const NavBar = () => {
 	useEffect(() => {
@@ -76,7 +77,7 @@ const NavBar = () => {
 									className="navbar-brand d-block d-md-none d-lg-none"
 									href="/"
 								>
-									<img className="img-fluid" src={logo} alt="" />
+									<img className="img-fluid" src={menuLogo} alt="" />
 								</a>
 
 								<ul className="nav navbar-nav mb-2 mb-lg-0 middle-area me-0">

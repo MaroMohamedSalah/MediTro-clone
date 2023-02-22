@@ -19,7 +19,8 @@ a {
 @media only screen and (max-width: 600px) {
 	/* For mobile */
 	.NavBar .navbar-brand {
-		width: 40%;
+		width: 45%;
+		margin-bottom: 10px;
 	}
 	.NavBar .container-fluid {
 		padding-top: 15px;
@@ -58,7 +59,6 @@ nav .search-btn button {
 }
 
 .num-bx i {
-	/* transform: rotate(90deg); */
 	width: 42px;
 	height: 42px;
 	text-align: center;
@@ -112,7 +112,7 @@ nav .search-btn button {
 	display: none;
 }
 .middle-area > li > a i {
-	color: #bbbbcf;
+	color: #eee;
 	font-size: 12px;
 	transition: all 0.4s ease-in-out;
 	margin: 4px;
@@ -169,6 +169,12 @@ nav .search-btn button {
 		width: 70%;
 		min-width: 300px;
 	}
+	.nav .offcanvas-body {
+		height: 100%;
+	}
+	.middle-area {
+		gap: 0;
+	}
 	.middle-area .dropdown-menu:not(.show) {
 		display: none;
 		transform: translateY(0px);
@@ -179,15 +185,18 @@ nav .search-btn button {
 	.middle-area .dropdown-menu.show {
 		display: block;
 	}
-	.middle-area > li > a {
+	.middle-area > li > a,
+	.middle-area > li > .active {
 		padding: 15px 2px;
 		padding: 15px 2px;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		color: #eee !important;
+		font-weight: 500;
 	}
 	.middle-area .nav-item {
-		border-bottom: 2px solid var(--backGroundColor);
+		border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 	}
 }
 .NavBar .sideBar {
@@ -208,22 +217,33 @@ nav .search-btn button {
 	}
 }
 .NavBar .social {
+	position: absolute;
+	bottom: 30px;
 	justify-content: space-evenly;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	justify-content: space-evenly;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	width: 71%;
-	margin-top: 50%;
+	width: 40%;
 }
-.NavBar .social a {
-	color: var(--backGroundColor);
-	font-size: 1.5em;
+
+.NavBar .social li {
+	background-color: var(--main-color);
+	outline: var(--main-color);
+	border-radius: 8px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: 2px solid var(--main-color);
 	transition: all var(--main-transition) ease-in-out;
 }
-.NavBar .social a:hover {
-	color: var(--main-color);
+.NavBar .social li a {
+	font-size: 1em;
+	color: #eee;
+	transition: all var(--main-transition) ease-in-out;
+}
+.NavBar .social li:hover {
+	background-color: var(--third-color);
 }
