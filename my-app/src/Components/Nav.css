@@ -112,7 +112,7 @@ nav .search-btn button {
 	display: none;
 }
 .middle-area > li > a i {
-	color: #eee;
+	/* color: #eee; */
 	font-size: 12px;
 	transition: all 0.4s ease-in-out;
 	margin: 4px;
@@ -198,6 +198,9 @@ nav .search-btn button {
 	.middle-area .nav-item {
 		border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 	}
+	.middle-area > li > a i {
+		color: #eee;
+	}
 }
 .NavBar .sideBar {
 	transition: all var(--main-transition) cubic-bezier(0.02, 0.57, 0.5, 0.79);
@@ -223,7 +226,7 @@ nav .search-btn button {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	width: 40%;
+	width: 53%;
 }
 
 .NavBar .social li {

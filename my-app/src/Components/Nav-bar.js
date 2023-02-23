@@ -36,9 +36,20 @@ const NavBar = () => {
 				};
 			}
 		});
+		const nav = document.getElementById("nav");
+		window.onscroll = () => {
+			if (window.scrollY !== 0) {
+				console.log("scroll");
+				nav.style.backgroundColor = "#fff";
+				nav.style.boxShadow = "rgb(0 0 0 / 2%) 0px 7px 7px -3px";
+			} else {
+				nav.style.backgroundColor = "transparent";
+				nav.style.boxShadow = "none";
+			}
+		};
 	}, []);
 	return (
-		<div className="NavBar">
+		<div className="NavBar" id="nav">
 			<div className="container-fluid">
 				<nav
 					className="navbar navbar-expand-lg bg-body-tertiary p-0 "
@@ -49,7 +60,7 @@ const NavBar = () => {
 							<img className="img-fluid" src={logo} alt="" />
 						</a>
 						<button
-							class="btn navbar-toggler"
+							className="btn navbar-toggler"
 							type="button"
 							data-bs-toggle="offcanvas"
 							data-bs-target="#offcanvasNavbar2"
@@ -58,21 +69,21 @@ const NavBar = () => {
 							<span className="navbar-toggler-icon"></span>
 						</button>
 						<div
-							class="sideBar offcanvas offcanvas-start w-100"
+							className="sideBar offcanvas offcanvas-start w-100"
 							data-bs-backdrop="false"
 							tabindex="-1"
 							id="offcanvasNavbar2"
 							aria-labelledby="offcanvasScrollingLabel"
 						>
-							<div class="offcanvas-header justify-content-end">
+							<div className="offcanvas-header justify-content-end">
 								<button
 									type="button"
-									class="btn-close"
+									className="btn-close"
 									data-bs-dismiss="offcanvas"
 									aria-label="Close"
 								></button>
 							</div>
-							<div class="offcanvas-body d-flex justify-content-start align-items-center flex-md-row flex-lg-row flex-column">
+							<div className="offcanvas-body d-flex justify-content-start align-items-center flex-md-row flex-lg-row flex-column">
 								<a
 									className="navbar-brand d-block d-md-none d-lg-none"
 									href="/"
@@ -183,32 +194,32 @@ const NavBar = () => {
 										</a>
 									</li>
 								</ul>
-								<ul class="social d-flex d-md-none d-lg-none">
-									<li class="linkedIn" id="linkedIn">
+								<ul className="social d-flex d-md-none d-lg-none">
+									<li className="linkedIn" id="linkedIn">
 										<a href="https://www.linkedin.com/in/marwan-mohamed-636b25226/">
 											<div>
-												<i class="fa-brands fa-linkedin-in"></i>
+												<i className="fa-brands fa-linkedin-in"></i>
 											</div>
 										</a>
 									</li>
-									<li class="git" id="git">
+									<li className="git" id="git">
 										<a href="https://github.com/MaroMohamedSalah">
 											<div>
-												<i class="fa-brands fa-github"></i>
+												<i className="fa-brands fa-github"></i>
 											</div>
 										</a>
 									</li>
-									<li class="insta" id="insta">
+									<li className="insta" id="insta">
 										<a href="https://www.instagram.com/maro_salah1/">
 											<div>
-												<i class="fa-brands fa-instagram"></i>
+												<i className="fa-brands fa-instagram"></i>
 											</div>
 										</a>
 									</li>
-									<li class="face" id="face">
+									<li className="face" id="face">
 										<a href="https://www.facebook.com/profile.php?id=100009187233222">
 											<div>
-												<i class="fa-brands fa-facebook-f"></i>
+												<i className="fa-brands fa-facebook-f"></i>
 											</div>
 										</a>
 									</li>
@@ -224,9 +235,9 @@ const NavBar = () => {
 											<i className="fa-solid fa-magnifying-glass"></i>
 										</button>
 									</li>
-									<li class="num-bx d-none d-xl-block">
+									<li className="num-bx d-none d-xl-block">
 										<a href="tel:(+01)999888777">
-											<i class="fas fa-phone-alt"></i> (+01) 999 888 777
+											<i className="fas fa-phone-alt"></i> (+01) 999 888 777
 										</a>
 									</li>
 									<li className="btn-area">

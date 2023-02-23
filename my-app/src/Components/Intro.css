@@ -32,6 +32,9 @@
 .Intro .first .ships {
 	z-index: -1;
 }
+.Intro .first .doctor-img {
+	animation: upAndDown 5s 1s forwards linear infinite;
+}
 @media only screen and (max-width: 600px) {
 	/* For mobile */
 	.Intro .first .ships {
@@ -48,20 +51,18 @@
 	/* For Laptops */
 	.Intro .first .doctor-img {
 		width: 75%;
-		animation: upAndDown 3s 1s forwards linear infinite;
 	}
 }
 @media screen and (min-width: 1900px) {
 	/* For Big TV's (HD Screens)  */
 	.Intro .first .doctor-img {
 		width: 100%;
-		animation: upAndDown 3s 1s forwards linear infinite;
 	}
 }
 .Intro .first .ships img:nth-child(1) {
 	left: -98px;
 	bottom: 127px;
-	animation: upAndDown 3s both linear infinite;
+	animation: upAndDown 5s both linear infinite;
 }
 .Intro .first .ships img:nth-child(2) {
 	left: 50%;
@@ -71,7 +72,7 @@
 .Intro .first .ships img:nth-child(3) {
 	right: 0;
 	bottom: 100px;
-	animation: leftAndRight 3s both linear infinite;
+	animation: leftAndRight 5s both linear infinite;
 }
 .Intro .first .ships img:nth-child(4) {
 	left: 5%;
@@ -80,7 +81,7 @@
 .Intro .first .ships img:nth-child(5) {
 	right: 45%;
 	top: 25%;
-	animation: upAndDown 3s both linear infinite;
+	animation: upAndDown 5s both linear infinite;
 }
 @media screen and (min-width: 768px) {
 	/* For Laptops */
@@ -112,16 +113,5 @@
 	}
 	100% {
 		transform: translateX(10px);
-	}
-}
-@keyframes ImgUpAndDown {
-	0% {
-		transform: translateY(10px);
-	}
-	50% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(10px);
 	}
 }
