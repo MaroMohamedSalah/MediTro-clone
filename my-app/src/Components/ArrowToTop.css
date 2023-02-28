@@ -1,0 +1,17 @@
+.ArrowToTop {
+	position: fixed;
+	background-color: #565acf !important;
+	color: var(--backGroundColor) !important;
+	right: 20px;
+	bottom: 30px;
+	opacity: 0;
+	transition: all var(--main-transition) ease-in-out;
+	animation-duration: 2s;
+	animation: fadeInUp;
+	z-index: 500;
+}
+.ArrowToTop:hover {
+	/* animation: zoomOutUp;
+	animation-duration: 2s; */
+	background-color: #565acf !important;
+}

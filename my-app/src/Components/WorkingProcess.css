@@ -1,0 +1,136 @@
+.WorkingProcess {
+	min-height: 75vh;
+	position: relative;
+	background-image: url("../images/BackGround-line.png");
+	background-repeat: no-repeat;
+	background-position-y: 50%;
+}
+.WorkingProcess .ships img:nth-child(1) {
+	top: 50%;
+	right: 10%;
+	animation: upAndDown 5s both linear infinite;
+}
+.WorkingProcess .ships img:nth-child(2) {
+	bottom: 75px;
+	right: 20%;
+}
+.WorkingProcess .ships img:nth-child(3) {
+	bottom: 75px;
+	left: 10%;
+	animation: upAndDown 5s both linear infinite;
+}
+.WorkingProcess .container-sm {
+	max-width: 950px !important;
+}
+.WorkingProcess .textGroup h1 {
+	font-size: 3em;
+	font-weight: 700;
+}
+.WorkingProcess .cards div .card {
+	margin-top: 30px;
+	position: relative;
+	box-shadow: 0 10px 60px 0 rgb(31 34 120 / 10%);
+	padding: 40px 30px;
+	border-radius: 20px;
+	background-color: #fff;
+	transition: all var(--main-transition);
+	overflow: hidden;
+	border: none;
+	z-index: 1;
+}
+.WorkingProcess .cards div .card:after {
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: var(--third-color);
+	z-index: -1;
+	transition: all var(--main-transition) ease-in-out;
+}
+.WorkingProcess .cards div .card:hover::after {
+	height: 100%;
+	bottom: 0;
+	top: auto;
+}
+.WorkingProcess .cards .active .card::after {
+	height: 100%;
+}
+.WorkingProcess .cards .active .card .cardNum {
+	transition: all var(--main-transition);
+	z-index: 9;
+	font-size: 80px;
+	font-weight: 900;
+	margin-bottom: 30px;
+	line-height: 80px;
+	text-shadow: 0 10px 0 #f38f5e;
+	-webkit-text-stroke: 2px #fff;
+	color: transparent;
+}
+.WorkingProcess .cards .active .card .cardContent h5,
+.WorkingProcess .cards .active .card .cardContent p {
+	color: white;
+}
+.WorkingProcess .cards div .card .cardNum {
+	transition: all var(--main-transition);
+	z-index: 9;
+	font-size: 80px;
+	font-weight: 900;
+	margin-bottom: 30px;
+	line-height: 80px;
+	-webkit-text-stroke: 2px var(--third-color);
+	text-shadow: 0 10px 0 #ffe3d3;
+	color: transparent;
+}
+.WorkingProcess .cards div .card .cardContent h5 {
+	color: var(--third-color);
+	font-weight: 600;
+}
+.WorkingProcess .cards div .card .cardContent p {
+	font-size: 0.8em;
+	font-weight: 500;
+}
+.WorkingProcess .btn-area a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+	margin-top: 21px;
+	background-color: #e1e2f6;
+	border: none;
+	color: var(--main-color);
+	font-weight: 600;
+	width: fit-content;
+	padding: 11px 23px !important;
+}
+.WorkingProcess .btn-area .btn-icon-bx {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	margin-left: 9px !important;
+	color: var(--main-color);
+}
+.WorkingProcess .active .btn-area a {
+	background-color: var(--backGroundColor);
+	color: var(--third-color);
+}
+.WorkingProcess .active .btn-area .btn-icon-bx {
+	background-color: var(--third-color);
+	color: var(--backGroundColor);
+}
+@media only screen and (max-width: 600px) {
+	/* For mobile */
+	.WorkingProcess .textGroup h1 {
+		font-size: 2em;
+	}
+}
+@media screen and (min-width: 768px) {
+	/* For Laptops */
+	.WorkingProcess .cards > div:nth-child(2) {
+		transform: translateY(-30px);
+	}
+}
+@media screen and (min-width: 1900px) {
+	/* For Big TV's (HD Screens)  */
+}

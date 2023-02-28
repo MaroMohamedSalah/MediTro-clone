@@ -44,7 +44,7 @@ a {
 	border-radius: inherit;
 	line-height: 40px;
 	display: inline-block;
-	margin: -12px -27px -12px 15px;
+	margin: -4px -19px -4px 5px;
 	color: #000;
 }
 .contact {
@@ -57,7 +57,10 @@ nav .search-btn button {
 	font-size: 1.25em;
 	color: var(--main-color);
 }
-
+nav .btn-area a {
+	background-color: #565acf;
+	border: none;
+}
 .num-bx i {
 	width: 42px;
 	height: 42px;

@@ -8,27 +8,31 @@ const NavBar = () => {
 			document.querySelectorAll(".middle-area .dropdown")
 		);
 		meddleArea.forEach((link) => {
-			link.onmouseover = () => {
-				link.children[0].classList.add("active");
-				link.children[0].classList.add("show");
-				link.children[0].setAttribute("aria-expanded", "true");
-				link.children[1].classList.add("show");
-			};
-			link.onmouseout = () => {
-				link.children[0].classList.remove("active");
-				link.children[0].classList.remove("show");
-				link.children[0].setAttribute("aria-expanded", "false");
-				link.children[1].classList.remove("show");
-			};
 			if (window.matchMedia("(max-width: 768px)").matches) {
 				link.onclick = () => {
+					console.log(link);
+					link.children[0].classList.add("active");
+					link.children[0].classList.add("show");
+					link.children[0].setAttribute("aria-expanded", "true");
+					link.children[1].classList.add("show");
+					console.log(link.children[0].textContent);
+				};
+				// link.onmouseleave = () => {
+				// 	console.log("out");
+				// 	link.children[0].classList.remove("active");
+				// 	link.children[0].classList.remove("show");
+				// 	link.children[0].setAttribute("aria-expanded", "false");
+				// 	link.children[1].classList.remove("show");
+				// };
+			} else {
+				link.onmouseover = () => {
+					console.log(link.children);
 					link.children[0].classList.add("active");
 					link.children[0].classList.add("show");
 					link.children[0].setAttribute("aria-expanded", "true");
 					link.children[1].classList.add("show");
 				};
-				link.onmouseleave = () => {
-					console.log("out");
+				link.onmouseout = () => {
 					link.children[0].classList.remove("active");
 					link.children[0].classList.remove("show");
 					link.children[0].setAttribute("aria-expanded", "false");
@@ -37,16 +41,18 @@ const NavBar = () => {
 			}
 		});
 		const nav = document.getElementById("nav");
-		window.onscroll = () => {
-			if (window.scrollY !== 0) {
-				console.log("scroll");
-				nav.style.backgroundColor = "#fff";
-				nav.style.boxShadow = "rgb(0 0 0 / 2%) 0px 7px 7px -3px";
-			} else {
-				nav.style.backgroundColor = "transparent";
-				nav.style.boxShadow = "none";
-			}
-		};
+		window.addEventListener("scroll", () => {
+			window.onscroll = () => {
+				if (window.scrollY !== 0) {
+					console.log(window.scrollY);
+					nav.style.backgroundColor = "#fff";
+					nav.style.boxShadow = "rgb(0 0 0 / 2%) 0px 7px 7px -3px";
+				} else {
+					nav.style.backgroundColor = "transparent";
+					nav.style.boxShadow = "none";
+				}
+			};
+		});
 	}, []);
 	return (
 		<div className="NavBar" id="nav">
