@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logo from "../images/logo.png";
 import menuLogo from "../images/menu logo.png";
 import "./Nav.css";
@@ -10,23 +10,16 @@ const NavBar = () => {
 		meddleArea.forEach((link) => {
 			if (window.matchMedia("(max-width: 768px)").matches) {
 				link.onclick = () => {
-					console.log(link);
 					link.children[0].classList.add("active");
 					link.children[0].classList.add("show");
 					link.children[0].setAttribute("aria-expanded", "true");
 					link.children[1].classList.add("show");
-					console.log(link.children[0].textContent);
 				};
-				// link.onmouseleave = () => {
-				// 	console.log("out");
-				// 	link.children[0].classList.remove("active");
-				// 	link.children[0].classList.remove("show");
-				// 	link.children[0].setAttribute("aria-expanded", "false");
-				// 	link.children[1].classList.remove("show");
-				// };
+				link.onmouseout = () => {
+					link.children[0].classList.remove("active");
+				};
 			} else {
 				link.onmouseover = () => {
-					console.log(link.children);
 					link.children[0].classList.add("active");
 					link.children[0].classList.add("show");
 					link.children[0].setAttribute("aria-expanded", "true");

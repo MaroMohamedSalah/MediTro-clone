@@ -188,8 +188,7 @@ nav .btn-area a {
 	.middle-area .dropdown-menu.show {
 		display: block;
 	}
-	.middle-area > li > a,
-	.middle-area > li > .active {
+	.middle-area > li > a {
 		padding: 15px 2px;
 		padding: 15px 2px;
 		width: 100%;
@@ -197,6 +196,9 @@ nav .btn-area a {
 		justify-content: space-between;
 		color: #eee !important;
 		font-weight: 500;
+	}
+	.middle-area > li > .active {
+		color: var(--third-color) !important;
 	}
 	.middle-area .nav-item {
 		border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
