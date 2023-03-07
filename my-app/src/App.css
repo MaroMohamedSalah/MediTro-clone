@@ -11,3 +11,15 @@
 body {
 	font-family: "Montserrat", sans-serif !important;
 }
+@media screen and (min-width: 1900px) {
+	/* For Big TV's (HD Screens)  */
+	.container-fluid,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+		max-width: 1720px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

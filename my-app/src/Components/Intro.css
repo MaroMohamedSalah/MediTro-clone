@@ -90,9 +90,6 @@
 		top: 20%;
 	}
 }
-@media screen and (min-width: 1900px) {
-	/* For Big TV's (HD Screens)  */
-}
 @keyframes upAndDown {
 	0% {
 		transform: translateY(10px);
