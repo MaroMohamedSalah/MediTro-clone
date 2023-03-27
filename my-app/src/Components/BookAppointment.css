@@ -1,5 +1,7 @@
 .BookAppointment {
 	min-height: 90vh;
+	overflow: hidden;
+	margin-top: 20px;
 }
 .BookAppointment .appointment-inner {
 	min-height: inherit;
