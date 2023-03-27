@@ -131,8 +131,8 @@
 	}
 }
 @media only screen and (max-width: 767px) {
-	.textGroup h1,
-	.textGroup p {
+	.Services .textGroup h1,
+	.Services .textGroup p {
 		color: white;
 	}
 	.Services .textGroup .btn {

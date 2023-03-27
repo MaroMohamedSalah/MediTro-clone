@@ -10,11 +10,11 @@ import MySlider2 from "./MySlider2";
 
 const Testimonial = () => {
 	return (
-		<div className="Testimonial mb-5">
+		<div className="Testimonial my-5">
 			<div className="container">
 				<div class="textGroup d-flex justify-content-center align-items-center flex-column">
 					<h6 class="title">Testimonial</h6>
-					<h1 className="w-50 p-5 fw-bold text-center">
+					<h1 className="p-5 fw-bold text-center">
 						See What Are The Patients Saying About us
 					</h1>
 					<div className="row w-100 align-items-center">
