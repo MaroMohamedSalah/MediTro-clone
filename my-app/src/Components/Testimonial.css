@@ -1,0 +1,121 @@
+.Testimonial {
+	min-height: 100vh;
+}
+.Testimonial .warper {
+	display: inline-block;
+}
+.Testimonial .doctorsList {
+	list-style: none;
+}
+.Testimonial .doctorsList li a img {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+}
+.Testimonial .doctorsList li:nth-of-type(1) {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.Testimonial .doctorsList li:nth-of-type(2) {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.Testimonial .doctorsList li:nth-of-type(3) {
+	top: 100px;
+	right: 20px;
+}
+.Testimonial .doctorsList li:nth-of-type(4) {
+	top: 100px;
+	left: 20px;
+}
+.Testimonial .doctorsList li:nth-of-type(5) {
+	right: 18px;
+	bottom: 110px;
+}
+.Testimonial .doctorsList li:nth-of-type(6) {
+	left: 18px;
+	bottom: 110px;
+}
+.Testimonial .slider {
+	padding-bottom: 75px;
+}
+.Testimonial .testimonial-bx {
+	background-color: var(--third-color);
+	color: white;
+	position: relative;
+	border-radius: 40px 0 40px 40px;
+	box-shadow: 0 0 30px rgba(185, 67, 0, 0.1);
+	padding: 50px;
+	margin: 50px 20px 20px;
+}
+.Testimonial .testimonial-bx::after {
+	content: "";
+	position: absolute;
+	right: 40px;
+	bottom: 20px;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 92px;
+	color: rgb(255, 255, 255);
+	opacity: 0.3;
+	line-height: 92px;
+}
+.Testimonial .testimonial-bx .icon {
+	top: -45px;
+	left: 30px;
+	font-size: 48px;
+	color: var(--third-color);
+	width: 75px;
+	height: 75px;
+	text-align: center;
+	background-color: #fff;
+	line-height: 75px;
+	border-radius: 20px;
+	box-shadow: 0 10px 60px 0 rgba(31, 34, 120, 0.1);
+}
+.Testimonial .testimonial-bx .bx-content p {
+	line-height: 28px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 400;
+	font-style: italic;
+	margin-bottom: 30px;
+}
+.Testimonial .slider-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.Testimonial .slick-arrow {
+	height: 50px;
+	width: 50px;
+	border-radius: 12px;
+	background-color: #ffe4d5;
+	color: #f17732;
+	font-size: 24px;
+	bottom: -70px;
+	top: auto;
+	transition: all 0.5s;
+	font-size: 0;
+}
+.Testimonial .slick-prev {
+	left: 18px;
+}
+.Testimonial .slick-prev::before,
+.Testimonial .slick-next::before {
+	color: var(--third-color);
+}
+.Testimonial .slick-prev:hover::before,
+.Testimonial .slick-next:hover::before {
+	color: white;
+}
+.Testimonial .slick-prev:hover,
+.Testimonial .slick-next:hover {
+	background-color: var(--third-color);
+}
+.Testimonial .slick-next {
+	left: 92px;
+}
